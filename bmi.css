@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Oswald&family=Pacifico&family=Rubik+Iso&family=Smokum&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    background-image: url(https://cdn.dribbble.com/users/1770290/screenshots/6183149/bg_79.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box{
+    width: 800px;
+    height: 600px;
+    justify-content: center;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px,5px,25px,10px black;
+    background-position: relative;
+    background-size: cover;
+    background-image: url(https://img.freepik.com/premium-photo/background-with-heart-with-heartbeat-monitor-line-heart-heartbeat-symbol-generative-ai_620624-6638.jpg);
+    margin-top: 2px;
+
+}
+
+h1{
+    color: rgb(250, 8, 141);
+    font-weight: bold;
+    font-size: 77px;
+    padding: 30px 0;
+}
+
+.content{
+    padding: 0 , 30px;
+}
+
+.input{
+    background: rgba(0, 0, 0, 0.648);
+    box-shadow: 0,0,95px,-35px black;
+    border-radius: 15px;
+    padding: 20px,0;
+    margin-bottom: 15px;
+    width: 40%;
+    margin-left: 250px;
+}
+
+.input label{
+    display: block;
+    font-size: 38px;
+    font-weight: bold;
+    font-weight: 600px;
+    color: rgb(231, 239, 239);
+    margin-bottom: 20px;
+}
+
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.inputW{
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0,0,95px,-35px black;
+    border-radius: 15px;
+    padding: 10px,0;
+    margin-bottom: 20px;
+
+}
+
+.inputW label{
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.inputW input{
+    outline: none;
+    border: none;
+    border-bottom: 8px solid rgb(250, 8, 141);
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputH{
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0,0,95px,-35px black;
+    border-radius: 15px;
+    padding: 10px,0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.inputH label{
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.inputH input{
+    outline: none;
+    border: none;
+    border-bottom: 8px solid rgb(250, 8, 141);
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button.calculate{
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 26px;
+    border-radius: 7px;
+    padding: 12px, 0;
+    width: 50%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+}
+
+button.calculate:hover{
+    background: rgba(250, 8, 141, 0.414);
+}
+
+.result{
+    padding: 10px, 20px;
+}
+
+.result p{
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.result #result{
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(234, 100, 173);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 7px,20px;
+    border-radius: 55px;
+    width: 135px;
+    margin-bottom: 25px;
+}
+
+.comment{
+    color: red;
+    font-weight: 800px;
+}
+
+.comment{
+    display: none;
+    border: dashed 2px;
+    border-radius: 7px;
+    padding: 5px;
+    background-image: url(https://img.freepik.com/premium-photo/background-with-heart-with-heartbeat-monitor-line-heart-heartbeat-symbol-generative-ai_620624-6638.jpg);
+}
+
+.gender{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0,0,95px,-35px black;
+    border-radius: 15px;
+    padding: 20px,0;
+    margin-bottom: 20px;
+}
+
+.gender .container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.gender.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+
+.gender.container:hover input ~ .checkmark{
+    background-color: white;
+}
+
+.gender.container:hover input:checked ~ .checkmark{
+    background-color: rgb(250, 8, 141);
+}
+
+.checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.gender.container input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.gender.container ~ .checkmark:after{
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(250, 8, 141);
+}
+
+.containerHW{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: gray;
+    padding-top: 300px;
+}
+
+.modal-content{
+    background-color: rgb(250, 8, 141);
+    margin: auto;
+    padding: 20px;
+    padding: 1px solid gray;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: black -1px,2px,2px,1px;
+}
+
+#modalText{
+    padding-top: 8px;
+    padding-right: 5px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+-modal-wrong{
+    border: 2px solid black;
+}
+
+.modal-correct{
+    border: 2px solid rgb(250, 8, 141);
+}
+
+.close{
+    color: rgb(250, 8, 141);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close:hover{
+    color: black;
+}
+
+.linkDownload{
+    position: fixed;
+    color: white;
+    margin: 20px;
+    padding: 10px, 10px;
+    bottom: -0px;
+    font-size: 16px;
+    font-weight: 400px;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.43s ease-in-out;
+}
+
+.linkDownload i {
+    padding-left: 7px;
+
+}
+
+.linkDownload:hover{
+    text-decoration: none;
+    background-color: rgb(250, 8, 141);
+}
+
+
+@media(max-width:700px){
+
+    .box{
+        width: 300px;
+        height: 500px;
+    }
+
+    .input label{
+        font-size: 18px;
+    }
+
+    .inputH label , .inputW label{
+        font-size: 14px;
+    }
+
+    .input input , .inputH input, .inputW input{
+        font-size: 24px;
+    }
+
+    .modal-content{
+        width: 380px;
+    }
+
+    .linkDownload{
+        display: none;
+    }
+
+    .head{
+        font-size: 30px;
+    }
+
+    .input{
+        margin-left: 95px;
+    }
+
+     #submit{
+        width: 250px;
+    } 
+
+}
